@@ -34,9 +34,9 @@ class DB:
         '''Adds a user to the database'''
         try:
             newUser = User(email=email, hashed_password=hashed_password)
-            self.__session.add(newUser)
-            self.__session.commit()
+            self._session.add(newUser)
+            self._session.commit()
         except Exception:
-            self.__session.rollback()
+            self._session.rollback()
             newUser = None
         return newUser
