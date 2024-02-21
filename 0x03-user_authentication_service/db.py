@@ -9,7 +9,6 @@ from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.orm.session import Session
 
 
-
 from user import Base, User
 
 
