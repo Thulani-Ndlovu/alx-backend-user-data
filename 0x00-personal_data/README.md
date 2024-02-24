@@ -1,0 +1,10 @@
+0x00. Personal data Project By Thulani Ndlovu
+=============================================
+Project Learning Objectives
+1. Examples of Personally Identifiable Information (PII)
+2. How to implement a log filter that will obfuscate PII fields
+3. How to encrypt a password and check the validity of an input password
+4. How to authenticate to a database using environment variables
+
+Tasks
+- this project is divided into 7 tasks that help in achieving all the indicated learning objectives
