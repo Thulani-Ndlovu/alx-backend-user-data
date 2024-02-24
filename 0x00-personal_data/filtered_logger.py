@@ -31,6 +31,7 @@ def get_logger() -> logging.Logger:
     logger.addHandler(streamHandler)
     return logger
 
+
 def get_db() -> mysql.connector.connection.MySQLConnection:
     '''Connector to database'''
     db_host = os.getenv("PERSONAL_DATA_DB_HOST", "localhost")
@@ -45,6 +46,7 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
         database=db_name,
     )
     return connection
+
 
 def main():
     '''user records in a table format'''
