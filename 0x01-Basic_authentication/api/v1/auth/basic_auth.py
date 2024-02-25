@@ -56,7 +56,7 @@ class BasicAuth(Auth):
             self,
             user_email: str, user_pwd: str) -> TypeVar('User'):
         '''get user object from credentials'''
-        if type(user_email) is str and type(user_email) is str:
+        if type(user_email) is str and type(user_pwd) is str:
             try:
                 users = User.search({"email": user_email})
             except Exception:
