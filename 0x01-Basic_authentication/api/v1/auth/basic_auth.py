@@ -51,3 +51,18 @@ class BasicAuth(Auth):
                 password = field_match.group('password')
                 return user, password
         return None, None
+
+    def user_object_from_credentials(
+            self,
+            user_email: str, user_pwd: str) -> TypeVar('User'):
+        '''get user object from credentials'''
+        if type(user_email) is str and type(user_email) is str:
+            try:
+                users = User.search({"email": user_email})
+            except Exception:
+                return None
+            if len(users) <= 0:
+                return None
+            if users[0].is_valid_password(user_pwd):
+                return users[0]
+        return None
